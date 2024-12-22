@@ -15,15 +15,15 @@ class Controllers {
                 model: model || defaultModel,
                 messages: [{ role: "user", content: question }],
             });
-            res.send({
+            res.status(200).json({
                 response,
                 state: 200
-            });
+            })
         } catch (error: any) {
-            res.send({
+            res.status(500).json({
                 response: error.message,
                 state: 500
-            });
+            })
         }
     }
 
@@ -34,15 +34,15 @@ class Controllers {
                 model: model || defaultModel,
                 input: question,
             });
-            res.send({
+            res.status(200).json({
                 response,
                 state: 200
-            });
+            })
         } catch (error: any) {
-            res.send({
+            res.status(500).json({
                 response: error.message,
                 state: 500
-            });
+            })
         }
     }
 
@@ -53,15 +53,15 @@ class Controllers {
                 model: model || defaultModel,
                 prompt: question,
             });
-            res.send({
+            res.status(200).json({
                 response,
                 state: 200
-            });
+            })
         } catch (error: any) {
-            res.send({
+            res.status(500).json({
                 response: error.message,
                 state: 500
-            });
+            })
         }
     }
 
