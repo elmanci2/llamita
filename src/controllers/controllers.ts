@@ -1,7 +1,7 @@
 import { Ollama } from "ollama";
 import { Request, Response } from "express";
 const llama = new Ollama();
-const defaultModel = "llama3.2:latest";
+const defaultModel = "llama3.2:1b";
 class Controllers {
     llama: Ollama;
     constructor() {
