@@ -6,11 +6,11 @@ routes.get("/", (req, res) => {
     res.send("hello world")
 })
 
-routes.post("/question", controllers.question)
+routes.post("/question", async (req, res) => await controllers.question(req, res))
 
-routes.post("/embed", controllers.embed)
+routes.post("/embed", async (req, res) => await controllers.embed(req, res))
 
-routes.post("/embeddings", controllers.embeddings)
+routes.post("/embeddings", async (req, res) => await controllers.embeddings(req, res))
 
 
 
